@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <title>Me First | Game @neet</title>
+    </head>
+
+    <body>
+        <div class="wrapper clearfix">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Sport Boy</div>
+                <div class="player-score" id="score-0"></div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Steps</div>
+                    <div class="player-current-score" id="current-0"></div>
+                </div>
+                <img src="fireworks.gif" alt="Winner" class="fireworks" />
+            </div>
+
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Lazy Boy</div>
+                <div class="player-score" id="score-1"></div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Steps</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+                <img src="fireworks.gif" alt="Winner" class="fireworks" />
+            </div>
+
+            <input type="text" placeholder="Steps to Win..  " class="final-score">
+            <div class="dice-wrapper">
+              <img src="dice-5.png" alt="Dice" class="dice" id="dice-1">
+              <img src="dice-5.png" alt="Dice" class="dice" id="dice-2">
+            </div>
+        </div>
+
+        <div class="action-btn-div">
+          <button class="btn-new"><i class="ion-ios-plus-outline"></i>New Race</button>
+          <button class="btn-roll"><i class="ion-ios-loop"></i>Steps</button>
+          <button class="btn-hold"><i class="icon ion-md-walk"></i>Walk</button>
+        </div>
+
+        <div class="road-container">
+          <div class="boy-walking" id="score-0">
+            <img src="walking-boy.gif" alt="boy" class="boy-img-0" />
+            <img src="walking-boy-1.gif" alt="boy-sport" class="boy-img-1" />
+            <img src="winner-flag.gif" alt="winner" class="winner-flag" />
+          </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

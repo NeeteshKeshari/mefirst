@@ -1,0 +1,227 @@
+/**********************************************
+*** GENERAL
+**********************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    background-image: url(background-img.jpg);
+    background-size: 100vw;
+    background-position: center bottom;
+    font-family: Lato;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: #555;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1000px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.player-0-panel, .player-1-panel {
+    width: 40%;
+    float: left;
+    height: auto;
+    padding: 50px;
+    position: relative;
+}
+.player-1-panel {
+    float: right;
+}
+
+
+
+/**********************************************
+*** PLAYERS
+**********************************************/
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #EB4D4D;
+    margin-bottom: 130px;
+}
+
+.active { background-color: #f7f7f7; }
+.active .player-name { font-weight: 300; }
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #EB4D4D;
+    top: -7px;
+    right: 10px;
+
+}
+
+.player-current-box {
+    background-color: #EB4D4D;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #222;
+}
+
+.player-current-score {
+    font-size: 30px;
+}
+
+.action-btn-div {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    right: 0;
+    background: antiquewhite;
+    padding: 40px 0;
+}
+
+button {
+    width: 33.33%;
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    float: left;
+}
+
+button:hover { font-weight: 600; }
+button:hover i { margin-right: 20px; }
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: #EB4D4D;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 45px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+.btn-new { top: 45px;}
+.btn-roll { top: 403px;}
+.btn-hold { top: 467px;}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+.fireworks {
+    position: absolute;
+    top: 9%;
+    left: 0;
+    display: none;
+}
+.winner { background-color: #f7f7f7; }
+.winner .player-name { font-weight: 300; color: #037703; }
+.winner .fireworks { display: block; }
+
+.final-score {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 520px;
+    color: #555;
+    font-size: 18px;
+    font-family: 'Lato';
+    text-align: center;
+    padding: 10px;
+    width: 160px;
+    text-transform: uppercase;
+    display: none;
+}
+
+.final-score:focus { outline: none; }
+
+#dice-1 { top: 120px; }
+#dice-2 { top: 250px; }
+
+.road-container {
+    position: absolute;
+    left: 0;
+    bottom: 121px;
+}
+.boy-walking {
+  position: relative;
+}
+
+.boy-img-0 {
+  position: fixed;
+  left: 0;
+  bottom: 121px;
+  width: 75px;
+  transition: 1.5s;
+}
+
+.boy-img-1 {
+  position: fixed;
+  left: 0;
+  bottom: 121px;
+  width: 100px;
+  transition: 1.5s;
+}
+.winner-flag {
+  position: fixed;
+  right: 0;
+  bottom: 121px;
+  width: 100px;
+}
+.flash-effect {
+  background: transparent;
+  box-shadow: 0px 0px 800px #ff0000 inset;
+}
